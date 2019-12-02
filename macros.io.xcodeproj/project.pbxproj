@@ -14,6 +14,7 @@
 		65A6D99D22C57A9F0046C23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A6D99B22C57A9F0046C23F /* LaunchScreen.storyboard */; };
 		65A6D9A822C57AA00046C23F /* macros_ioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D9A722C57AA00046C23F /* macros_ioTests.swift */; };
 		65A6D9B322C8088E0046C23F /* fruitclassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D9B222C8088E0046C23F /* fruitclassifier.mlmodel */; };
+		65A6D9B522C939C50046C23F /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D9B422C939C50046C23F /* CGImagePropertyOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		65A6D9A722C57AA00046C23F /* macros_ioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macros_ioTests.swift; sourceTree = "<group>"; };
 		65A6D9A922C57AA00046C23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A6D9B222C8088E0046C23F /* fruitclassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fruitclassifier.mlmodel; sourceTree = "<group>"; };
+		65A6D9B422C939C50046C23F /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				65A6D99222C57A940046C23F /* AppDelegate.swift */,
 				65A6D99422C57A940046C23F /* MacrosIOViewController.swift */,
+				65A6D9B422C939C50046C23F /* CGImagePropertyOrientation.swift */,
 				65A6D99622C57A940046C23F /* Main.storyboard */,
 				65A6D9B222C8088E0046C23F /* fruitclassifier.mlmodel */,
 				65A6D99922C57A9F0046C23F /* Assets.xcassets */,
@@ -202,6 +205,7 @@
 			files = (
 				65A6D99522C57A940046C23F /* MacrosIOViewController.swift in Sources */,
 				65A6D99322C57A940046C23F /* AppDelegate.swift in Sources */,
+				65A6D9B522C939C50046C23F /* CGImagePropertyOrientation.swift in Sources */,
 				65A6D9B322C8088E0046C23F /* fruitclassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
