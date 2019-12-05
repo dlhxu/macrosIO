@@ -30,3 +30,33 @@ struct FoodStruct: Codable{
     var allHighlightFields: String?
     var score: Float?
 }
+
+
+struct FoodData: Codable{
+    var description: String?
+    var servingSize: Float?
+    var servingSizeUnit: String?
+    var householdServingFullText: String?
+    var labelNutrients: LabelNutrients?
+    var brandedFoodCategory: String?
+    var fdcId: Int?
+}
+
+struct NutrientVal: Codable{
+    var value: Float?
+}
+
+struct LabelNutrients: Codable{
+    var fat: NutrientVal?
+    var saturatedFat: NutrientVal?
+    var transFat: NutrientVal?
+    var cholesterol: NutrientVal?
+    var sodium: NutrientVal?
+    var carbohydrates: NutrientVal?
+    var fiber: NutrientVal?
+    var sugars: NutrientVal?
+    var protein: NutrientVal?
+    var calcium: NutrientVal?
+    var iron: NutrientVal?
+    var calories: NutrientVal?
+}

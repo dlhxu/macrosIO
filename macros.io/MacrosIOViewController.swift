@@ -94,26 +94,33 @@ class MacrosIOViewController: UIViewController {
                 
                 let foodDataClient = FoodDataClient()
                 
-                // make call to food data client, passing in completion handler
+                // make call to food data client, passing in completion handler which passes an fdcId to another api call to get food nutritional data, then update UI fields
                 
-                // TODO create functionality to make API call to get list of foods, then an additional API call with the resulting food FDCID to get nutrition data
-                foodDataClient.getFoodList(food: "broccoli") {
-                    result in
+                foodDataClient.getFoodList(food: "broccoli") { result in
                     switch result{
                     case (.failure(let error)):
                         print (error)
-                        //            return .failure(error)
                         
                     case (.success(let value)):
-                        //            print (value)
                         // return the first "food" returned in the food list
+
                         let food = value.foods[0]
-                        self.servingSize.text = "Serving Size:" + food.description!
-                        self.totalCalories.text = "Total Calories:" + food.description!
-                        self.carbs.text = "Carbs:" + food.description!
-                        self.protein.text = "Protein:" + food.description!
-                        self.fats.text = "Fats:" + food.description!
-                        print(food) 
+                        
+                        foodDataClient.getFoodData(fdcId: food.fdcId!) { result in
+                            switch result{
+                            case .failure(let error):
+                                print(error)
+                            case .success(let value):
+                                
+                                let nutrients = value.labelNutrients
+                                self.servingSize.text = "Serving Size:" + String(value.servingSize!)
+                                self.totalCalories.text = "Total Calories: " + (nutrients?.calories!.value!.description)! + "kcal"
+                                self.carbs.text = "Carbs:" + (nutrients?.calories!.value!.description)! + "g"
+                                self.protein.text = "Protein:" + (nutrients?.protein!.value!.description)! + "g"
+                                self.fats.text = "Fats:" + (nutrients?.fat!.value!.description)! + "g"
+                            }
+                            
+                        }
                     }
                 }
             }

@@ -12,13 +12,14 @@ class FoodDataClient {
     
     let session = URLSession.shared
     let apiKey = ProcessInfo.processInfo.environment["API_KEY"]
+    let baseUrl = "https://api.nal.usda.gov/fdc/v1/"
     
     
     //MARK USDA API Requests
     
     // Get list of foods that match criteria supplied by model
     func getFoodList(food: String, completionHandler: @escaping (Result<FoodListResponseStruct, Error>) -> Void) -> Void{
-        let url = URL(string: "https://api.nal.usda.gov/fdc/v1/search?api_key=" + apiKey!)!
+        let url = URL(string: baseUrl + "search?api_key=" + apiKey!)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -42,9 +43,20 @@ class FoodDataClient {
                 }
         }
     }
+
     
-    func getFoodId(){
-        
+    func getFoodData(fdcId: Int, completionHandler: @escaping (Result<FoodData, Error>) -> Void){
+        let url = URL(string: baseUrl + String(fdcId) + "?api_key=" + apiKey!)!
+        AF.request(url, method: .get).validate()
+            .responseDecodable(of: FoodData.self) { response in
+                switch response.result{
+                case .success(let value as FoodData):
+                    completionHandler(.success(value))
+                    
+                case .failure(let error):
+                    completionHandler(.failure(error))
+                }
+        }
     }
     
     func handleClientError(_ error: Error?){
