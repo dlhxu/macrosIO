@@ -19,6 +19,12 @@ class MacrosIOViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var classificationLabel: UILabel!
     
+    @IBOutlet weak var servingSize: UILabel!
+    @IBOutlet weak var totalCalories: UILabel!
+    @IBOutlet weak var carbs: UILabel!
+    @IBOutlet weak var protein: UILabel!
+    @IBOutlet weak var fats: UILabel!
+    
     // MARK: - Image Classification
     
     /// - Tag: MLModelSetup
@@ -34,6 +40,7 @@ class MacrosIOViewController: UIViewController {
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
             })
+            
             request.imageCropAndScaleOption = .centerCrop
             return request
         } catch {
@@ -84,10 +91,38 @@ class MacrosIOViewController: UIViewController {
                     return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
                 }
                 self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+                
+                let foodDataClient = FoodDataClient()
+                
+                // make call to food data client, passing in completion handler
+                
+                // TODO create functionality to make API call to get list of foods, then an additional API call with the resulting food FDCID to get nutrition data
+                foodDataClient.getFoodList(food: "broccoli") {
+                    result in
+                    switch result{
+                    case (.failure(let error)):
+                        print (error)
+                        //            return .failure(error)
+                        
+                    case (.success(let value)):
+                        //            print (value)
+                        // return the first "food" returned in the food list
+                        let food = value.foods[0]
+                        self.servingSize.text = "Serving Size:" + food.description!
+                        self.totalCalories.text = "Total Calories:" + food.description!
+                        self.carbs.text = "Carbs:" + food.description!
+                        self.protein.text = "Protein:" + food.description!
+                        self.fats.text = "Fats:" + food.description!
+                        print(food) 
+                    }
+                }
             }
         }
     }
     
+    func updateNutritionFacts(food: FoodStruct){
+        
+    }
     // MARK: - Photo Actions
     
     @IBAction func takePicture() {
@@ -145,5 +180,4 @@ fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [U
 fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
     return input.rawValue
 }
-
 
