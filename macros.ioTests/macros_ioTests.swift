@@ -22,6 +22,9 @@ class macros_ioTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let foodDataClient = FoodDataClient()
+        let foodStruct = foodDataClient.getFoodList(food: "broccoli")
+        XCTAssert(foodStruct.fdcId == 486511)
     }
 
     func testPerformanceExample() {

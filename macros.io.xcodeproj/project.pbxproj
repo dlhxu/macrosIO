@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E284D3E2398139E008FE56E /* FoodListRequestStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E284D3D2398139E008FE56E /* FoodListRequestStruct.swift */; };
+		3E284D6F23996407008FE56E /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3E284D6E23996407008FE56E /* podfile */; };
+		3ED648612391A81600F59B6A /* FoodDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED648602391A81600F59B6A /* FoodDataClient.swift */; };
+		3ED648632391BB6600F59B6A /* FoodListResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED648622391BB6600F59B6A /* FoodListResponseStruct.swift */; };
 		65A6D99322C57A940046C23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D99222C57A940046C23F /* AppDelegate.swift */; };
 		65A6D99522C57A940046C23F /* MacrosIOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D99422C57A940046C23F /* MacrosIOViewController.swift */; };
 		65A6D99822C57A940046C23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A6D99622C57A940046C23F /* Main.storyboard */; };
@@ -15,6 +19,7 @@
 		65A6D9A822C57AA00046C23F /* macros_ioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D9A722C57AA00046C23F /* macros_ioTests.swift */; };
 		65A6D9B322C8088E0046C23F /* fruitclassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D9B222C8088E0046C23F /* fruitclassifier.mlmodel */; };
 		65A6D9B522C939C50046C23F /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6D9B422C939C50046C23F /* CGImagePropertyOrientation.swift */; };
+		8562F16C3C9A968F40C8DF6D /* Pods_macros_io.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF0A79B556DC35BD46412C7 /* Pods_macros_io.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E284D3D2398139E008FE56E /* FoodListRequestStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListRequestStruct.swift; sourceTree = "<group>"; };
+		3E284D6E23996407008FE56E /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		3ED648602391A81600F59B6A /* FoodDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDataClient.swift; sourceTree = "<group>"; };
+		3ED648622391BB6600F59B6A /* FoodListResponseStruct.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = FoodListResponseStruct.swift; sourceTree = "<group>"; };
 		65A6D98F22C57A930046C23F /* macros.io.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macros.io.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A6D99222C57A940046C23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A6D99422C57A940046C23F /* MacrosIOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacrosIOViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +49,9 @@
 		65A6D9A922C57AA00046C23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A6D9B222C8088E0046C23F /* fruitclassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fruitclassifier.mlmodel; sourceTree = "<group>"; };
 		65A6D9B422C939C50046C23F /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		9E2BB213B3429E932D476C87 /* Pods-macros.io.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macros.io.debug.xcconfig"; path = "Target Support Files/Pods-macros.io/Pods-macros.io.debug.xcconfig"; sourceTree = "<group>"; };
+		B72DC01BF83DD7041E902B5A /* Pods-macros.io.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macros.io.release.xcconfig"; path = "Target Support Files/Pods-macros.io/Pods-macros.io.release.xcconfig"; sourceTree = "<group>"; };
+		DAF0A79B556DC35BD46412C7 /* Pods_macros_io.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macros_io.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8562F16C3C9A968F40C8DF6D /* Pods_macros_io.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A6E3E1BD2AAAFC3A4963E0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0A79B556DC35BD46412C7 /* Pods_macros_io.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65A6D98622C57A930046C23F = {
 			isa = PBXGroup;
 			children = (
+				3E284D6E23996407008FE56E /* podfile */,
 				65A6D99122C57A940046C23F /* macros.io */,
 				65A6D9A622C57AA00046C23F /* macros.ioTests */,
 				65A6D99022C57A940046C23F /* Products */,
+				F0D7BA7103A0E3C57D292336 /* Pods */,
+				4A6E3E1BD2AAAFC3A4963E0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +113,9 @@
 				65A6D99922C57A9F0046C23F /* Assets.xcassets */,
 				65A6D99B22C57A9F0046C23F /* LaunchScreen.storyboard */,
 				65A6D99E22C57A9F0046C23F /* Info.plist */,
+				3ED648602391A81600F59B6A /* FoodDataClient.swift */,
+				3ED648622391BB6600F59B6A /* FoodListResponseStruct.swift */,
+				3E284D3D2398139E008FE56E /* FoodListRequestStruct.swift */,
 			);
 			path = macros.io;
 			sourceTree = "<group>";
@@ -102,6 +129,16 @@
 			path = macros.ioTests;
 			sourceTree = "<group>";
 		};
+		F0D7BA7103A0E3C57D292336 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E2BB213B3429E932D476C87 /* Pods-macros.io.debug.xcconfig */,
+				B72DC01BF83DD7041E902B5A /* Pods-macros.io.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65A6D9AC22C57AA00046C23F /* Build configuration list for PBXNativeTarget "macros.io" */;
 			buildPhases = (
+				6AAEE66B96944F55A011B292 /* [CP] Check Pods Manifest.lock */,
 				65A6D98B22C57A930046C23F /* Sources */,
 				65A6D98C22C57A930046C23F /* Frameworks */,
 				65A6D98D22C57A930046C23F /* Resources */,
+				672C3B1B060B17F206AF2B06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +224,7 @@
 			files = (
 				65A6D99D22C57A9F0046C23F /* LaunchScreen.storyboard in Resources */,
 				65A6D99A22C57A9F0046C23F /* Assets.xcassets in Resources */,
+				3E284D6F23996407008FE56E /* podfile in Resources */,
 				65A6D99822C57A940046C23F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,14 +238,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		672C3B1B060B17F206AF2B06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-macros.io/Pods-macros.io-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-macros.io/Pods-macros.io-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-macros.io/Pods-macros.io-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AAEE66B96944F55A011B292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-macros.io-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65A6D98B22C57A930046C23F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED648612391A81600F59B6A /* FoodDataClient.swift in Sources */,
 				65A6D99522C57A940046C23F /* MacrosIOViewController.swift in Sources */,
+				3ED648632391BB6600F59B6A /* FoodListResponseStruct.swift in Sources */,
 				65A6D99322C57A940046C23F /* AppDelegate.swift in Sources */,
 				65A6D9B522C939C50046C23F /* CGImagePropertyOrientation.swift in Sources */,
+				3E284D3E2398139E008FE56E /* FoodListRequestStruct.swift in Sources */,
 				65A6D9B322C8088E0046C23F /* fruitclassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +451,7 @@
 		};
 		65A6D9AD22C57AA00046C23F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E2BB213B3429E932D476C87 /* Pods-macros.io.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +470,7 @@
 		};
 		65A6D9AE22C57AA00046C23F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72DC01BF83DD7041E902B5A /* Pods-macros.io.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
