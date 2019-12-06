@@ -95,8 +95,9 @@ class MacrosIOViewController: UIViewController {
                 let foodDataClient = FoodDataClient()
                 
                 // make call to food data client, passing in completion handler which passes an fdcId to another api call to get food nutritional data, then update UI fields
+                let mostLikelyClassification = classifications[0].identifier
                 
-                foodDataClient.getFoodList(food: "broccoli") { result in
+                foodDataClient.getFoodList(food: mostLikelyClassification) { result in
                     switch result{
                     case (.failure(let error)):
                         print (error)
